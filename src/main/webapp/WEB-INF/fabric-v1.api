@@ -1,0 +1,481 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://${app.id}.appspot.com/_ah/api",
+  "name" : "fabric",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://${app.id}.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "methods" : {
+    "fabric.fabric.getParent" : {
+      "path" : "{parent}",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "fabric.Fabric.getParent",
+      "request" : {
+        "parameters" : {
+          "parent" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fabric.fabric.postEntityData" : {
+      "path" : "postEntityData",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "fabric.Fabric.postEntityData",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fabric.fabric.getEntityPrimitives" : {
+      "path" : "entityprimitivescollection",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "fabric.Fabric.getEntityPrimitives",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fabric.fabric.postEntityPrimitives" : {
+      "path" : "postEntityPrimitives",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "fabric.Fabric.postEntityPrimitives",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fabric.fabric.getParentByIdWithChildren" : {
+      "path" : "{parent}/{id}/{children}",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "fabric.Fabric.getParentByIdWithChildren",
+      "request" : {
+        "parameters" : {
+          "parent" : {
+            "type" : "string",
+            "required" : true
+          },
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          },
+          "children" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fabric.fabric.getEntityData" : {
+      "path" : "entitydatacollection",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "fabric.Fabric.getEntityData",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fabric.fabric.getEntityId" : {
+      "path" : "entityidcollection",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "fabric.Fabric.getEntityId",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fabric.fabric.postEntityId" : {
+      "path" : "postEntityId",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "fabric.Fabric.postEntityId",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fabric.fabric.getParentById" : {
+      "path" : "{parent}/{id}",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "fabric.Fabric.getParentById",
+      "request" : {
+        "parameters" : {
+          "parent" : {
+            "type" : "string",
+            "required" : true
+          },
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "EntityList" : {
+        "id" : "EntityList",
+        "type" : "object",
+        "properties" : {
+          "entities" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "_any"
+            }
+          }
+        }
+      },
+      "_any" : {
+        "id" : "_any",
+        "type" : "any"
+      },
+      "EntityData" : {
+        "id" : "EntityData",
+        "type" : "object",
+        "properties" : {
+          "entityId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "description" : {
+            "$ref" : "Text"
+          }
+        }
+      },
+      "Text" : {
+        "id" : "Text",
+        "type" : "object",
+        "properties" : {
+          "value" : {
+            "type" : "string"
+          }
+        }
+      },
+      "IdResult" : {
+        "id" : "IdResult",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          }
+        }
+      },
+      "EntityPrimitives" : {
+        "id" : "EntityPrimitives",
+        "type" : "object",
+        "properties" : {
+          "entityId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "flag" : {
+            "type" : "boolean"
+          },
+          "title" : {
+            "type" : "string"
+          },
+          "nof" : {
+            "type" : "integer"
+          },
+          "price" : {
+            "type" : "number"
+          },
+          "created" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "email" : {
+            "$ref" : "Email"
+          },
+          "link" : {
+            "$ref" : "Link"
+          },
+          "type" : {
+            "$ref" : "Radio"
+          },
+          "flags" : {
+            "type" : "array",
+            "items" : {
+              "type" : "boolean"
+            }
+          },
+          "texts" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "numbers" : {
+            "type" : "array",
+            "items" : {
+              "type" : "integer"
+            }
+          },
+          "prices" : {
+            "type" : "array",
+            "items" : {
+              "type" : "number"
+            }
+          },
+          "dates" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "format" : "int64"
+            }
+          },
+          "emails" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Email"
+            }
+          },
+          "links" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Link"
+            }
+          },
+          "types" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Radio"
+            }
+          }
+        }
+      },
+      "Email" : {
+        "id" : "Email",
+        "type" : "object",
+        "properties" : {
+          "email" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Link" : {
+        "id" : "Link",
+        "type" : "object",
+        "properties" : {
+          "value" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Radio" : {
+        "id" : "Radio",
+        "type" : "string",
+        "enum" : [ "value1", "value2" ]
+      },
+      "EntityPrimitivesCollection" : {
+        "id" : "EntityPrimitivesCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "EntityPrimitives"
+            }
+          }
+        }
+      },
+      "ParentWithChildren" : {
+        "id" : "ParentWithChildren",
+        "type" : "object",
+        "properties" : {
+          "parent" : {
+            "$ref" : "_any"
+          },
+          "children" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "_any"
+            }
+          }
+        }
+      },
+      "EntityDataCollection" : {
+        "id" : "EntityDataCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "EntityData"
+            }
+          }
+        }
+      },
+      "EntityId" : {
+        "id" : "EntityId",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          }
+        }
+      },
+      "EntityIdCollection" : {
+        "id" : "EntityIdCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "EntityId"
+            }
+          }
+        }
+      },
+      "SingleEntity" : {
+        "id" : "SingleEntity",
+        "type" : "object",
+        "properties" : {
+          "entity" : {
+            "$ref" : "_any"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "fabric.Fabric.getParent" : {
+        "response" : {
+          "$ref" : "EntityList"
+        }
+      },
+      "fabric.Fabric.postEntityData" : {
+        "request" : {
+          "$ref" : "EntityData"
+        },
+        "response" : {
+          "$ref" : "IdResult"
+        }
+      },
+      "fabric.Fabric.getEntityPrimitives" : {
+        "response" : {
+          "$ref" : "EntityPrimitivesCollection"
+        }
+      },
+      "fabric.Fabric.postEntityPrimitives" : {
+        "request" : {
+          "$ref" : "EntityPrimitives"
+        },
+        "response" : {
+          "$ref" : "IdResult"
+        }
+      },
+      "fabric.Fabric.getParentByIdWithChildren" : {
+        "response" : {
+          "$ref" : "ParentWithChildren"
+        }
+      },
+      "fabric.Fabric.getEntityData" : {
+        "response" : {
+          "$ref" : "EntityDataCollection"
+        }
+      },
+      "fabric.Fabric.getEntityId" : {
+        "response" : {
+          "$ref" : "EntityIdCollection"
+        }
+      },
+      "fabric.Fabric.postEntityId" : {
+        "request" : {
+          "$ref" : "EntityId"
+        },
+        "response" : {
+          "$ref" : "IdResult"
+        }
+      },
+      "fabric.Fabric.getParentById" : {
+        "response" : {
+          "$ref" : "SingleEntity"
+        }
+      }
+    }
+  }
+}

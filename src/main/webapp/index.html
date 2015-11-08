@@ -1,0 +1,36 @@
+<html>
+<head>
+</head>
+<body>
+
+  <h1>Fabric</h1>
+
+  <p>JavaScript for API located at <strong>gapi.client.fabric.fabric</strong></p>
+  
+  <p>Click in textarea below</p>
+
+  <textarea cols=100 rows=100 onclick="testGET(this)"></textarea>
+
+  <script type="text/javascript">
+      function testGET(element) {
+        gapi.client.fabric.fabric.getEntityId().execute(function(resp) {
+          element.value = JSON.stringify(resp, null, 2);
+        });
+      }
+      function apiLoaded() {
+        // Add all calls to list
+        console.log("JavaScript API calls:");
+        for (var key in gapi.client.fabric.fabric) {
+          console.log("gapi.client.fabric.fabric." + key);
+        }
+      }
+      function localInit() {
+        gapi.client.load('fabric', 'v1', apiLoaded, '//' + window.location.host + '/_ah/api');
+      }
+    </script>
+
+  <script src="https://apis.google.com/js/client.js?onload=localInit">
+    </script>
+
+</body>
+</html>
