@@ -4,7 +4,7 @@
     <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
     <init-param>
       <param-name>services</param-name>
-      <param-value>fabric.Fabric</param-value>
+      <param-value>fabric.FabricApi</param-value>
     </init-param>
   </servlet>
   <filter>

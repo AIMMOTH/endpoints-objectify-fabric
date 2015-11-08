@@ -1,4 +1,4 @@
-package fabric;
+package fabric.result;
 
 public class IdResult {
 

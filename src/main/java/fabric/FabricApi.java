@@ -12,12 +12,16 @@ import fabric.datastore.Objectify;
 import fabric.entity.EntityData;
 import fabric.entity.EntityId;
 import fabric.entity.EntityPrimitives;
+import fabric.result.EntityList;
+import fabric.result.IdResult;
+import fabric.result.ParentWithChildren;
+import fabric.result.SingleEntity;
 
 @Api(
     name = "fabric",
     version = "v1"
     )
-public class Fabric {
+public class FabricApi {
   
   /**
    * Create an EntityId with a POST.
@@ -42,10 +46,11 @@ public class Fabric {
   }
 
   /**
-   * Create an EntityData with a POST. Returns its new id.
+   * Create an EntityData with a POST. Save with same id as a EntityId to fetch them at the same time.
    * 
    * @param entity
    * @return
+   * @see getParentByIdWithChildren
    */
   @ApiMethod(httpMethod = "post")
   public IdResult postEntityData(EntityData entity) {
@@ -64,10 +69,11 @@ public class Fabric {
   }
   
   /**
-   * Create an EntityPrimitive with a POST. Returns its new id.
+   * Create an EntityPrimitive with a POST. Save with same id as a EntityId to fetch them at the same time.
    * 
    * @param entity
    * @return
+   * @see getParentByIdWithChildren
    */
   @ApiMethod(httpMethod = "post")
   public IdResult postEntityPrimitives(EntityPrimitives entity) {

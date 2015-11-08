@@ -1,4 +1,4 @@
-package fabric;
+package fabric.result;
 
 import java.util.List;
 
