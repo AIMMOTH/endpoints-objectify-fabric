@@ -5,7 +5,7 @@
 
   <h1>Fabric</h1>
 
-  <p>JavaScript for API located at <strong>gapi.client.fabric.fabric</strong></p>
+  <p>JavaScript for API located at <strong>gapi.client.fabric.fabricApi</strong></p>
   
   <p>Click in textarea below</p>
 
@@ -13,15 +13,15 @@
 
   <script type="text/javascript">
       function testGET(element) {
-        gapi.client.fabric.fabric.getEntityId().execute(function(resp) {
+        gapi.client.fabric.fabricApi.getEntityId().execute(function(resp) {
           element.value = JSON.stringify(resp, null, 2);
         });
       }
       function apiLoaded() {
         // Add all calls to list
         console.log("JavaScript API calls:");
-        for (var key in gapi.client.fabric.fabric) {
-          console.log("gapi.client.fabric.fabric." + key);
+        for (var key in gapi.client.fabric.fabricApi) {
+          console.log("gapi.client.fabric.fabricApi." + key);
         }
       }
       function localInit() {

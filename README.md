@@ -33,16 +33,24 @@ It's easy to use the generated JavaScript.
 
 1) Create an EntityId with POST. Returns its id.
 
-<pre>gapi.client.fabric.fabric.postEntityId({}).execute(function(resp) {console.dir(resp);});</pre>
+<pre>
+gapi.client.fabric.fabricApi.postEntityId({}).execute(function(resp) {console.dir(resp);});
+</pre>
 
 2) Create an EntityData with the same id as return in 1. This entity contains a description text.
 
-<pre>gapi.client.fabric.fabric.postEntityData({entityId: "5207287069147136", description: "massa text"}).execute(function(resp) {console.dir(resp);});</pre>
+<pre>
+gapi.client.fabric.fabricApi.postEntityData({entityId: "5207287069147136", description: "massa text"}).execute(function(resp) {console.dir(resp);});
+</pre>
 
 3) Create an EntityPrimitives with various data and with the same id as 1
 
-<pre>gapi.client.fabric.fabric.postEntityPrimitives({entityId: "5207287069147136", email: "carl@workaround.io"}).execute(function(resp) {console.dir(resp);});</pre>
+<pre>
+gapi.client.fabric.fabricApi.postEntityPrimitives({entityId: "5207287069147136", email: "carl@workaround.io"}).execute(function(resp) {console.dir(resp);});
+</pre>
 
 4) Collect all three entities with the same id as 1 and by specifying what types to return. Types to return are separated with whitespace.
 
-<pre>gapi.client.fabric.fabric.getParentByIdWithChildren({id: "5207287069147136", parent:"entityid", children:"entitydata entityprimitives"}).execute(function(resp) {console.dir(resp);});</pre>
+<pre>
+gapi.client.fabric.fabricApi.getParentByIdWithChildren({id: "5207287069147136", parent:"entityid", children:"entitydata entityprimitives"}).execute(function(resp) {console.dir(resp);});
+</pre>
